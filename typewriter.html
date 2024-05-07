@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Typing Effect</title>
+<style>
+    /* Define the digital typing animation */
+    @keyframes digital-typing {
+        0% { width: 0; opacity: 0; }
+        40% { opacity: 1; }
+        100% { width: 100%; opacity: 1; }
+    }
+
+    /* Define the digital deleting animation */
+    @keyframes digital-deleting {
+        0% { width: 100%; opacity: 1; }
+        40% { opacity: 1; }
+        100% { width: 0; opacity: 0; }
+    }
+    
+    /* Apply the digital typing animation to the text */
+    .digital-typewriter {
+        overflow: hidden;
+        border-right: .15em solid #000000; /* Green border */
+        white-space: nowrap;
+        font-family: 'Pirulen', sans-serif; /* Futuristic font */
+    }
+
+    /* Blinking cursor animation */
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+
+    .cursor {
+        display: inline-block;
+        vertical-align: middle;
+        width: 0.15em;
+        height: 1em;
+        background-color: #000000; /* Green color */
+        animation: blink 1s step-end infinite;
+    }
+</style>
+</head>
+<body>
+    <div class="digital-typewriter">
+        <span id="text">Creating a digital and futuristic typing effect.</span>
+        <span class="cursor"></span>
+    </div>
+
+    <script>
+        const texts = [
+            "Digital Creator",
+            "E-Commerce Specialist",
+            "Independent Photojournalist"
+        ];
+        let currentTextIndex = 0;
+        const textElement = document.getElementById('text');
+        const cursorElement = document.querySelector('.cursor');
+
+        function typeWriterEffect() {
+            const currentText = texts[currentTextIndex];
+            let charIndex = 0;
+            textElement.textContent = ''; // Clear the text
+            const typingInterval = setInterval(() => {
+                if (charIndex < currentText.length) {
+                    textElement.textContent += currentText.charAt(charIndex);
+                    charIndex++;
+                } else {
+                    clearInterval(typingInterval);
+                    setTimeout(deleteText, 1200); // Wait for 1.2 second before deleting
+                }
+            }, 100);
+        }
+
+        function deleteText() {
+            let charIndex = textElement.textContent.length - 1;
+            const deletingInterval = setInterval(() => {
+                if (charIndex >= 0) {
+                    textElement.textContent = textElement.textContent.slice(0, charIndex);
+                    charIndex--;
+                } else {
+                    clearInterval(deletingInterval);
+                    currentTextIndex = (currentTextIndex + 1) % texts.length;
+                    setTimeout(typeWriterEffect, 200); // Wait for 0.5 second before typing new text
+                }
+            }, 50);
+        }
+
+        // Start the typing effect
+        typeWriterEffect();
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Travels</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	
+		<style>
+			* {
+			  box-sizing: border-box;
+			}
+		  
+			/* Define variables */
+			:root {
+			  --max-img-width: 600px;
+			  --max-img-height: 400px;
+			}
+		  
+			img {
+			  max-width: 100%;
+			  vertical-align: top;
+			}
+		  
+			.gallery {
+			  display: flex;
+			  margin: 10px auto;
+			  max-width: var(--max-img-width);
+			  position: relative;
+			  padding-top: calc(var(--max-img-height) / var(--max-img-width) * 100%);
+		  
+			  @media screen and (min-width: var(--max-img-width)) {
+				padding-top: var(--max-img-height);
+			  }
+			}
+		  
+			.gallery__img {
+			  position: relative;
+			  top: 0;
+			  left: 0;
+			  opacity: 0;
+			  transition: opacity 0.3s ease-in-out;
+			}
+		  
+			.gallery__thumb {
+			  padding-top: 6px;
+			  margin: 6px;
+			  display: block;
+			}
+		  
+			.gallery__selector {
+			  position: absolute;
+			  opacity: 0;
+			  visibility: hidden;
+			}
+		  
+			.gallery__selector:checked + .gallery__img {
+			  opacity: 1;
+			}
+		  
+			.gallery__selector:checked ~ .gallery__thumb > img {
+			  box-shadow: 0 0 0 3px #0be2f6;
+			}
+		  </style>
+	
+	
+	
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><img src="images/AZNGwhite.png" alt="Image" width="180" height=100% alt="" /></a>
+					</header>
+
+				<!-- Nav -->
+				<nav id="nav">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li class="active"><a href="travels.html">Travels</a></li>
+						<li><a href="about.html">About</a></li>
+					</ul>
+					<ul class="icons">
+						<li><a href="https://twitter.com/zengalbert" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="https://www.instagram.com/infrazeng" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="https://github.com/infrazeng" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="https://www.linkedin.com/in/zengal/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<div class="image main"><img src="images/travels.jpg" alt="" /></div>
+								<header class="major">
+									<h1>Travels</h1>
+									<p1>Incredible locations that I've had the privilege of exploring.</p1>
+								</header>
+
+							</section>
+
+					
+					</head>
+					<body>
+
+					<section class="gallery">
+							<div class="gallery__item">
+							  <input type="radio" id="img-1" checked name="gallery" class="gallery__selector"/>
+							  <img class="gallery__img" src="travels/mexico/1.jpg" alt=""/>
+							  <label for="img-1" class="gallery__thumb"><img src="travels/mexico/1.jpg" alt=""/></label>
+							</div>
+							<div class="gallery__item">
+							  <input type="radio" id="img-2" name="gallery" class="gallery__selector"/>
+							  <img class="gallery__img" src="travels/mexico/2.jpg" alt=""/>
+							  <label for="img-2" class="gallery__thumb"><img src="travels/mexico/2.jpg" alt=""/></label>
+							</div>
+							<div class="gallery__item">
+							  <input type="radio" id="img-3" name="gallery" class="gallery__selector"/>
+							  <img class="gallery__img" src="travels/mexico/3.jpg" alt=""/>
+							  <label for="img-3" class="gallery__thumb"><img src="travels/mexico/3.jpg" alt=""/></label>
+							</div>
+							<div class="gallery__item">
+							  <input type="radio" id="img-4" name="gallery" class="gallery__selector"/>
+							  <img class="gallery__img" src="travels/mexico/4.jpg" alt=""/>
+							  <label for="img-4" class="gallery__thumb"><img src="travels/mexico/4.jpg" alt=""/></label>
+							</div>
+						  </section>
+
+					<!--<Section class="posts">
+						<article class="photo-gallery">
+							<header>
+								<h2 style="text-align: left;">Mexico, 2022<br /></h2>
+							</header>							
+					<div><img class="main-photo" src="travels/mexico/1.jpg" alt="Main Photo">
+						
+							<img class="small-photo" src="travels/mexico/2.jpg" alt="Small Photo 1">
+							<img class="small-photo" src="travels/mexico/3.jpg" alt="Small Photo 2">
+							<img class="landscape-photo" src="travels/mexico/4.jpg" alt="Small Photo 3">
+							<img class="landscape-photo" src="travels/mexico/5.jpeg" alt="Small Photo 4">
+							 Add more smaller photos if needed 
+						</div>
+					</article>
+					<article class="photo-gallery">
+						<header><h2>Cuba, 2022<br />
+
+						</h2>
+					</header>
+					<div><img class="main-photo" src="main_photo.jpg" alt="Main Photo">
+						
+							<img class="small-photo" src="cuba/cuba2.jpg" alt="Small Photo 1">
+							<img class="small-photo" src="cuba/cuba3.jpg" alt="Small Photo 2">
+							<img class="small-photo" src="cuba/cuba4.jpg" alt="Small Photo 3">
+							<img class="small-photo" src="cuba/cuba5.jpg" alt="Small Photo 4">
+							<!-- Add more smaller photos if needed 
+						</div>
+					</article>
+				</section> -->
+					
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section class="split contact">
+							<section class="alt">
+								<h3>Email</h3>
+								<p><a href="alzeng99@gmail.com">alzeng99@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="https://twitter.com/zengalbert" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://www.instagram.com/infrazeng" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/infrazeng" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/zengal/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
